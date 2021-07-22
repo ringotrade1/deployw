@@ -14,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
      # - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        run: zip
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "aaasecret-falls-38024" #Must be unique in Heroku
@@ -23,3 +22,4 @@ jobs:
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
           #run: "echo!"
           buildpack: "https://github.com/technomile/Heroku-WordPress.git"
+          run: zip
