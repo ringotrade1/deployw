@@ -16,7 +16,7 @@ jobs:
      # - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "aaasecret-falls-38024" #Must be unique in Heroku
+          heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
           heroku_email: "ringotrade@gmail.com"
           # branch: "dev"
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
@@ -26,6 +26,6 @@ jobs:
   build2:
      runs-on: ubuntu-latest 
      steps:  
-        -name: zip test
+        - name: zip test
           run: zip
           
