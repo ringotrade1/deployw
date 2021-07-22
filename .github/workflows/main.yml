@@ -21,8 +21,9 @@ jobs:
           # branch: "dev"
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
           #run: "echo!"
-          buildpack: "https://github.com/technomile/Heroku-WordPress.git"
-          run: echo "TEEEEEEST1"
+          branch: "main"
+          #buildpack: "https://github.com/technomile/Heroku-WordPress.git"
+          #run: echo "TEEEEEEST1"
           
   build2:
      runs-on: ubuntu-latest 
