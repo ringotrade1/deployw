@@ -19,4 +19,5 @@ jobs:
           heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
           #heroku_email: "YOUR EMAIL"
         #  branch: "dev"
-          run: echo "Hello, world!"
+         healthcheck: "https://secret-falls-38024.herokuapp.com/health"
+          run: "echo!"
