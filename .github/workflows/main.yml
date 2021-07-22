@@ -12,8 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest 
     steps:
-      - uses: actions/checkout@v2
-      - uses: ringotrade1/deployw@v
+      - uses: actions/checkout@v0
+     # - uses: ringotrade1/deployw@v0
      # - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
