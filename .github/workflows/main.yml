@@ -6,7 +6,7 @@ name: CIwp
 on:
   push:
     branches:
-      - master # Changing the branch here would also work
+      - main # Changing the branch here would also work
 
 jobs:
   build:
