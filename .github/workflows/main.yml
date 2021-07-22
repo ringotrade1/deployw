@@ -22,4 +22,5 @@ jobs:
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
           #run: "echo!"
           buildpack: "https://github.com/technomile/Heroku-WordPress.git"
-          run: zip
+  build2:
+        run: zip
