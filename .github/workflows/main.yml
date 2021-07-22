@@ -8,21 +8,21 @@ on:
     branches:
       - main # Changing the branch here would also work
 
-jobs:
-  build:
-    runs-on: ubuntu-latest 
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
-          heroku_email: "ringotrade@gmail.com"
+#jobs:
+ # build:
+   # runs-on: ubuntu-latest 
+   # steps:
+     # - uses: actions/checkout@v2
+      #  with:
+          #heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          #heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
+         # heroku_email: "ringotrade@gmail.com"
           # branch: "dev"
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
           #run: "echo!"
-          branch: "main"
+          #branch: "main"
           #buildpack: "https://github.com/technomile/Heroku-WordPress.git"
-          run: git push heroku master
+         # run: git push heroku master
           
 
           
