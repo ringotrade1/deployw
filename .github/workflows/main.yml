@@ -19,6 +19,6 @@ jobs:
           heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
           heroku_email: "ringotrade@gmail.com"
           # branch: "dev"
-          healthcheck: "https://secret-falls-38024.herokuapp.com/health"
-          run: "echo!"
-          #buildpack: "https://github.com/technomile/Heroku-WordPress.git"
+          #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
+          #run: "echo!"
+          buildpack: "https://github.com/technomile/Heroku-WordPress.git"
