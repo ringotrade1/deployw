@@ -8,16 +8,17 @@ on:
     branches:
       - main # Changing the branch here would also work
 
-#jobs:
- # build:
-   # runs-on: ubuntu-latest 
-   # steps:
-     # - uses: actions/checkout@v2
-      #  with:
-          #heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          #heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
-         # heroku_email: "ringotrade@gmail.com"
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
+          heroku_email: "ringotrade@gmail.com"
           # branch: "dev"
+          run: git remote show 
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
           #run: "echo!"
           #branch: "main"
