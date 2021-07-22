@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v2
-      - uses: ringotrade1/deployw@master
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
