@@ -22,10 +22,11 @@ jobs:
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
           #run: "echo!"
           buildpack: "https://github.com/technomile/Heroku-WordPress.git"
+          run: echo "TEEEEEEST1"
           
   build2:
      runs-on: ubuntu-latest 
      steps:  
-        - name: zip test
-          run: zip
+        - name: test2
+          run: echo "TEEEEEEST2"
           
