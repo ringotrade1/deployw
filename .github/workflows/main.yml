@@ -26,4 +26,5 @@ jobs:
   build2:
      runs-on: ubuntu-latest 
      steps:  
+         -name: zip
           run: zip
