@@ -23,4 +23,6 @@ jobs:
           #run: "echo!"
           buildpack: "https://github.com/technomile/Heroku-WordPress.git"
   build2:
-        run: zip
+     runs-on: ubuntu-latest 
+     steps:  
+          run: zip
