@@ -15,8 +15,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
-          heroku_email: "ringotrade@gmail.com"
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+            
           # branch: "dev"
           #run: git remote show 
           #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
@@ -25,7 +26,7 @@ jobs:
           #buildpack: "https://github.com/technomile/Heroku-WordPress.git"
           
           run: |
-               heroku git:remote -a secret-falls-38024
+               heroku git:remote -a secret-falls-38024,
                git push heroku main
          #https://git.heroku.com/secret-falls-38024.git
           
