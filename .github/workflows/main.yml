@@ -27,8 +27,7 @@ jobs:
           
           run: |
                heroku git:remote -a secret-falls-38024,
-               git push heroku main
-               
+               git push heroku main               
          #https://git.heroku.com/secret-falls-38024.git
           
 
