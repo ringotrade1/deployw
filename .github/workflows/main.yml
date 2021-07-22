@@ -17,7 +17,7 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "secret-falls-38024" #Must be unique in Heroku
-          #heroku_email: "YOUR EMAIL"
-        #  branch: "dev"
-         healthcheck: "https://secret-falls-38024.herokuapp.com/health"
+          # heroku_email: "YOUR EMAIL"
+          # branch: "dev"
+          healthcheck: "https://secret-falls-38024.herokuapp.com/health"
           run: "echo!"
