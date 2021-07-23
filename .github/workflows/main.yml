@@ -14,9 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
+         run: heroku -v
+      #- uses: actions/checkout@v2
+       # with:
+        #  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        #  heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+         # heroku_email: ${{secrets.HEROKU_EMAIL}}
             
           # branch: "dev"
           #run: git remote show 
@@ -24,10 +27,10 @@ jobs:
           #run: "echo!"
           #branch: "main"
           #buildpack: "https://github.com/technomile/Heroku-WordPress.git"
-          
-          run: |
-               heroku git:remote -a secret-falls-38024,
-               git push heroku main               
+
+          #run: |
+               # heroku git:remote -a secret-falls-38024,
+               #git push heroku main               
          #https://git.heroku.com/secret-falls-38024.git
           
 
