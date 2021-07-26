@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repository
-      uses: mhoofman/wordpress-heroku@master
+      uses: actions/checkout@v2
     - name: Deploy to Herokuy
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
