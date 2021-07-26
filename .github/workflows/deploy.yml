@@ -14,7 +14,7 @@ jobs:
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           justlogin: true
       - run: heroku auth:whoami
-      - run: heroku addons:create heroku-postgresql
+      - run: heroku addons:create heroku-postgresql -a boiling-brook-67581
            
           
      
