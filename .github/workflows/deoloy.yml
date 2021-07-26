@@ -4,7 +4,7 @@ name: deploy
 on:
   push:
     branches:
-      - main # Changing the branch here would also work
+      - main # dChanging the branch here would also work
 jobs:
   heroku-deploy:
     runs-on: ubuntu-latest
