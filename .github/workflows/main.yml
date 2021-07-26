@@ -19,8 +19,8 @@ jobs:
     - name: heroku
       run: heroku -v
     - name: heroku login
-  run: |
-    cat > ~/.netrc <<EOF
+      run: |
+      cat > ~/.netrc <<EOF
       machine api.heroku.com
         login $HEROKU_EMAIL
         password $HEROKU_API_KEY
@@ -28,7 +28,7 @@ jobs:
         login $HEROKU_EMAIL
         password $HEROKU_API_KEY
     EOF
-  env:
+     env:
     HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
     - name: heroku create
