@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-         run: heroku create
+         run: echo $RANDOM
       #- uses: actions/checkout@v2
        # with:
         #  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
