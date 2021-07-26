@@ -16,6 +16,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: random
       run: echo $RANDOM
+    - name: heroku
+      run: heroku -v
       #- uses: actions/checkout@v2
        # with:
         #  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
