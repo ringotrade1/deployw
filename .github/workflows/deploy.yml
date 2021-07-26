@@ -1,14 +1,19 @@
+  
+# This is a basic workflow to help you get started with Actions
+
 name: deploy
  
 
 on:
   push:
     branches:
-      - main # dChanging the branch here would also work
+      - main # Changing the branch here would also work
+
 jobs:
-  heroku-deploy:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest 
     steps:
+   
       - name: Check out repository
         uses: actions/checkout@main
       - name: Deploy to Heroku
