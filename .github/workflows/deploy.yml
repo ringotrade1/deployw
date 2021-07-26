@@ -28,9 +28,9 @@ jobs:
           HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
       - name: vvvvvv
         run: echo $HEROKU_APP_NAME
-      - name: Add Heroku remote
+    #  - name: Add Heroku remote
         
-        run: heroku git:remote --app $HEROKU_APP_NAME 
+      #  run: heroku git:remote --app $HEROKU_APP_NAME 
 
         env:
           HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
