@@ -18,12 +18,18 @@ jobs:
       run: echo $RANDOM
     - name: heroku
       run: heroku -v
-    - name: heroku create
+    - name: heroku login
       env:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         #heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
         heroku_email: ${{secrets.HEROKU_EMAIL}}
-      run: heroku create
+      run: heroku login
+    - name: heroku create
+      #env:
+       # heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        #heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+        #heroku_email: ${{secrets.HEROKU_EMAIL}}
+      run: heroku creare
       #- uses: actions/checkout@v2
        # with:
         #  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
