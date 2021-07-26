@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
       - name: Deploy to Heroku
-        uses: ringotrade1/deployw@master
+        uses: ringotrade1/deployw@main
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
