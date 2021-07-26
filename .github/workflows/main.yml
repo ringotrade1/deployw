@@ -12,9 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest 
     steps:
-      - uses: actions/checkout@v2
-        with:
-         run: echo $RANDOM
+    
+    - uses: actions/checkout@v2
+    - name: random
+      run: echo $RANDOM
       #- uses: actions/checkout@v2
        # with:
         #  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
