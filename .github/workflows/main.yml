@@ -9,51 +9,30 @@ on:
       - main # Changing the branch here would also work
 
 jobs:
-  build:
-    runs-on: ubuntu-latest 
+  custom-deploy:
+    runs-on: ubuntu-latest
     steps:
-    
-    - uses: actions/checkout@v2
-    - name: random
-      run: echo $RANDOM
-    - name: heroku
-      run: heroku -v
-    - name: heroku login
-      run: |
-      cat > ~/.netrc <<EOF
-      machine api.heroku.com
-        login $HEROKU_EMAIL
-        password $HEROKU_API_KEY
-      machine git.heroku.com
-        login $HEROKU_EMAIL
-        password $HEROKU_API_KEY
-    EOF
-     env:
-    HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-    HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
-    - name: heroku create
-      env:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-        heroku_email: ${{secrets.HEROKU_EMAIL}}
-      run: heroku create
-      #- uses: actions/checkout@v2
-       # with:
-        #  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        #  heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-         # heroku_email: ${{secrets.HEROKU_EMAIL}}
-            
-          # branch: "dev"
-          #run: git remote show 
-          #healthcheck: "https://secret-falls-38024.herokuapp.com/health"
-          #run: "echo!"
-          #branch: "main"
-          #buildpack: "https://github.com/technomile/Heroku-WordPress.git"
-
-          #run: |
-               # heroku git:remote -a secret-falls-38024,
-               #git push heroku main               
-         #https://git.heroku.com/secret-falls-38024.git
-          
-
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Heroku login credentials
+        run: |
+          cat > ~/.netrc <<EOF
+            machine api.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKU_API_KEY
+            machine git.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKU_API_KEY
+          EOF
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+      - name: Add Heroku remote
+        run: heroku git:remote --app $HEROKU_APP_NAME
+        env:
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+      - name: Push to Heroku
+        run: git push heroku master
           
