@@ -25,10 +25,10 @@ jobs:
         heroku_email: ${{secrets.HEROKU_EMAIL}}
       run: heroku login
     - name: heroku create
-      #env:
-       # heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        #heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-        #heroku_email: ${{secrets.HEROKU_EMAIL}}
+      env:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+        heroku_email: ${{secrets.HEROKU_EMAIL}}
       run: heroku create
       #- uses: actions/checkout@v2
        # with:
