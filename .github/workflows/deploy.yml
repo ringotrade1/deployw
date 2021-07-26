@@ -15,7 +15,7 @@ jobs:
           justlogin: true
       - run: heroku auth:whoami
       - run: | 
-              heroku addons:create heroku-postgresql -a HEROKU_APP_NAME
+              heroku addons:create heroku-postgresql -a ${{ secrets.HEROKU_APP_NAME }}
               heroku pg:promote HEROKU_POSTGRESQL_INSTANCE
            
           
